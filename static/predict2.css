@@ -1,0 +1,177 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(dyslexia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  header {
+    height: 70px;
+    background-color: #73b7c9dd;
+    margin-top: 5px;
+    text-align: right;
+    position: static;
+  }
+
+  .w{
+    background-color: #e9eef0;
+    font-weight: 100;
+    font-size: 28px;
+    opacity: 0.7;
+    padding: 0.85vw;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    
+  }
+
+  .w:hover {
+    background-color: #bdcdd1dd;
+    border: 0px;
+  }
+
+  footer {
+    height: 55px;
+    background-color: #73b7c9dd;
+    font-size: 15px;
+    padding: 1em;
+    text-align: center;
+    position: static;
+    padding-bottom: 2em;
+    margin-bottom: 0vh;
+  }
+
+  a:link {
+    color: black;
+    text-decoration-line: none;
+  }
+
+  a:visited {
+    color: black;
+    text-decoration-line: none;
+  }
+
+  a:hover {
+    color: #2d2d2e;
+    text-decoration-line: none;
+  }
+
+  a:active {
+    color: black;
+    text-decoration-line: none;
+  }
+
+  #select {
+    font-weight: 800;
+    border: 2px solid black;
+    margin-right: 0.2em;
+  }
+
+  #quote {
+    font-size: 40px;
+    font-weight: 20;
+    background-color: rgba(245, 245, 245, 1);
+    padding: 5px;
+    text-align: center;
+  }
+
+  .login {
+    background-color: #73b7c9aa;
+    margin: 10vh 10vw;
+    padding: 5vh 2vw;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+  }
+
+  .form__field {
+    width: 11vw;
+    min-width: 100px;
+    height: 30px;
+    background: none;
+    border-bottom: 3px grey solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .form__field:focus::placeholder {
+    visibility: hidden;
+  }
+  h3{
+    color:black;
+    padding: 5px;
+  }
+  .box {
+    background-color: #e9eef0;
+    padding: 10px;
+    min-width: 250px;
+    width: 22vw;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: inline-flexbox;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+
+  .form__group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+  }
+  .btn{
+    align-self: center;
+  }
+
+  .btn{
+position: relative;
+display: inline-flex;
+width: 180px;
+height: 55px;
+margin: auto;
+perspective: 1000px;
+
+}
+.btn a{
+font-size: 19px;
+letter-spacing: 1px;
+transform-style: preserve-3d;
+transform: translateZ(-25px);
+transition: transform .25s;
+font-family: 'Montserrat', sans-serif;
+
+}
+.btn a:before,
+.btn a:after{
+position: absolute;
+content: "PREDICT";
+height: 55px;
+width: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 5px solid black;
+box-sizing: border-box;
+border-radius: 5px;
+}
+.btn a:before{
+color: #fff;
+background: #000;
+transform: rotateY(0deg) translateZ(25px);
+}
+.btn a:after{
+color: #000;
+transform: rotateX(90deg) translateZ(25px);
+}
+.btn a:hover{
+transform: translateZ(-25px) rotateX(-90deg);
+}
+h1{
+text-align: center;
+}

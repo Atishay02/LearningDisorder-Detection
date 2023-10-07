@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>home page</title>
+   
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+<body>
+    <header>
+        <br>
+        <span id="select"><a href="home.html">Home</a></span>
+        <span><a href="about.html">About</a></span>
+        <span><a href="survey.html">Survey</a></span>
+        <span><a href="predict.html">Dyslexia</a></span>
+        <span id="last"><a href="predict2.html">Dyscalculia</a></span>
+    </header>
+
+    <div class="parallax1"></div>
+
+    <div class="quote">
+        <centre><i id="quote">"Children are a nation's most valuable assets!"</i></centre><br><br>
+        Learning disabilities are disorders that affect the ability to understand or use spoken or written language, do
+        mathematical calculations, coordinate movements, or direct attention. Learning disabilities have nothing to do
+        with
+        how smart a person is. Rather, a person with a learning disability may just see, hear, or understand things
+        differently.
+        That can make everyday tasks, such as studying for a test or staying focused in class, much more difficult.
+        There
+        are strategies a person can learn to make it easier
+        to cope with these differences.<br>
+        It's important to note that attention deficit hyperactivity disorder (ADHD) and autism spectrum disorders are
+        not
+        the same as learning disabilities. There are many different kinds of learning disabilities, and they can affect
+        people differently. </br>
+    </div>
+    <div class="parallax2"></div>
+    <div class="quote">
+
+        <h1>
+            <centre><b> How do you know if your child has a learning disability? </b></centre><br>
+        </h1>
+        We have developed Machine Learning Models to test whether your child has a learning disability or not. Take the given survey and then ask your child to take the respective quiz as per recommendation. <br>
+        <br>
+        <br>
+        <span><a href="survey.html">Take Survey</a></span>
+        <br>
+        <br>
+    </div>
+        <div class="box">
+            <p>OUR SERVICES
+            </p>
+        <div class="service">
+            <div class="grid">
+                <img src="{{url_for('static',filename='service1.jpeg')}}"class="gridimg">
+                <p id="head">DYSLEXIA PREDICTION</p>
+                <p>A Machine Learning Model that predicts whether a person is dyslexic or not by results of a quick quiz.</p>
+                <div class="link">
+                    <a href="quiz.html">Take quiz</a></div>
+                </div>
+                
+            <div class="grid">
+                <img src="{{url_for('static',filename='service2.jpeg')}}"class="gridimg">
+                <p id="head">DYSGRAPHIA PREDICTION</p>
+                <p>A Machine Learning Model that predicts whether a person is dysgraphic or not by results of a quick quiz.</p>
+                <div class="link">
+                    <a href="dysgraphia.html">Take quiz</a></div>
+                
+            </div>
+            <div class="grid">
+                <img src="{{url_for('static',filename='service2.png')}}"class="gridimg">
+                <p id="head">DYSCALCULIA PREDICTION</p>
+                <p>A Machine Learning Model that predicts whether a person is dyscalculic or not by results of a quick quiz</p>
+                <div class="link">
+                    <a href="dyscalculia.html">Take quiz</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax3"></div>
+    <div class="alan-btn"></div>
+Handle commands from the Alan Studio
+<script type="text/javascript"
+ src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "acd7d58e6b4189842a86fe6cf53dc2272e956eca572e1d8b807a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+    },
+    rootEl: document.getElementById("alan-btn"),
+  });
+</script>
+    <footer>
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br><br>
+    </footer>
+
+</body>
+
+</html>

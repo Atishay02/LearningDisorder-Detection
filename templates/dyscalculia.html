@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quiz page</title>
+   
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='dyscalculia.css') }}">
+
+<body>
+    <header>
+        <br>
+        <span><a href="index.html">Home</a></span>
+        <span><a href="about.html">About</a></span>
+        <span><a href="survey.html">Survey</a></span>
+        <span><a href="predict.html">Dyslexia</a></span>
+        <span id="last"><a href="predict2.html">Dyscalculia</a></span>
+    </header>
+    <div class="parallax1">
+        <div id="warning">
+            <centre> This quiz is specially designed for students to test if they are dyscalculic or not. Students are
+                advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                ALL THE BEST JUNIOR!</centre>
+        </div>
+    </div>
+    <div class="main">
+        <form name="quiz" method="post" action="quiz.php">
+            <div class="question">
+                <span id="question">
+                    Question 1
+                </span><br><br>
+                <div class="content" onclick="q1score()">
+                    Find the next figure in the following pattern<br>
+                    <br>
+                    <img src="{{url_for('static',filename='1.jpeg')}}"class="image" width=400 height=100>
+                    <br><br>
+                    <input type="radio" id="q1a" name="q1" value="4">
+                    <label for="q1a"><img src="{{url_for('static',filename='1a.jpeg')}}"class="image" width=100 height=50></label><br>
+                    <input type="radio" id="q1b" name="q1" value="0">
+                    <label for="q1b"><img src="{{url_for('static',filename='1b.jpeg')}}"class="image" width=100 height=50></label><br>
+                    <input type="radio" id="q1c" name="q1" value="0">
+                    <label for="q1c"><img src="{{url_for('static',filename='1c.jpeg')}}"class="image" width=100 height=50>></label><br>
+                    <input type="radio" id="q1d" name="q1" value="0">
+                    <label for="q1d"><img src="{{url_for('static',filename='1d.jpeg')}}"class="image" width=100 height=50></label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 2
+                </span><br><br>
+                <div class="content" onclick="q2score()">
+                    Anu has 5 biscuits, Charu has some biscuits. Together they have 7 biscuits. How many biscuits does Charu have?
+<br><br>
+                    <input type="radio" id="q2a" name="q2" value="4">
+                    <label for="q2a">2</label><br>
+                    <input type="radio" id="q2b" name="q2" value="0">
+                    <label for="q2b">4</label><br>
+                    <input type="radio" id="q2c" name="q2" value="0">
+                    <label for="q2c">6</label><br>
+                    <input type="radio" id="q2d" name="q2" value="0">
+                    <label for="q2d">3</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 3
+                </span><br><br>
+                <div class="content" onclick="q3score()">
+                    9 + 6 = ?
+<br><br>
+                    
+                    <input type="radio" id="q3a" name="q3" value="0">
+                    <label for="q3a">10</label><br>
+                    <input type="radio" id="q3b" name="q3" value="0">
+                    <label for="q3b">11</label><br>
+                    <input type="radio" id="q3a" name="q3" value="4">
+                    <label for="q3a">15</label><br>
+                    <input type="radio" id="q3b" name="q3" value="0">
+                    <label for="q3b">5</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 4
+                </span><br><br>
+                <div class="content" onclick="q4score()">
+                    Which one of the following options is not correct?
+<br><br>
+                    <input type="radio" id="q4a" name="q4" value="4">
+                    <label for="q4a"><img src="{{url_for('static',filename='2a.jpeg')}}"class="image" width=100 height=70></label><br>
+                    <input type="radio" id="q4b" name="q4" value="0">
+                    <label for="q4b"><img src="{{url_for('static',filename='2b.jpeg')}}"class="image" width=100 height=70></label></label><br>
+                    <input type="radio" id="q4c" name="q4" value="4">
+                    <label for="q4c"><img src="{{url_for('static',filename='2c.jpeg')}}"class="image" width=100 height=70></label></label><br>
+                    <input type="radio" id="q4d" name="q4" value="0">
+                    <label for="q4d"><img src="{{url_for('static',filename='2d.jpeg')}}"class="image" width=100 height=70></label></label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 5
+                </span><br><br>
+                <div class="content" onclick="q5score()">
+                    7 + 5 - 6 = ?<br><br>
+                    <input type="radio" id="q5a" name="q5" value="0">
+                    <label for="q5a">2</label><br>
+                    <input type="radio" id="q5b" name="q5" value="0">
+                    <label for="q5b">4</label><br>
+                    <input type="radio" id="q5c" name="q5" value="4">
+                    <label for="q5c">6</label><br>
+                    <input type="radio" id="q5d" name="q5" value="0">
+                    <label for="q5d">6</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 6
+                </span><br><br>
+                <div class="content" onclick="q6score()">
+                    Look at the picture and identify the shadow.<br><br>
+                    <img src="{{url_for('static',filename='6.jpeg')}}"class="image" width=100 height=100></label><br>
+                    <input type="radio" id="q6a" name="q6" value="4">
+                    <label for="q6a">Hand</label><br>
+                    <input type="radio" id="q6b" name="q6" value="0">
+                    <label for="q6b">Leg</label><br>
+                    <input type="radio" id="q6c" name="q6" value="0">
+                    <label for="q6c">Nose</label><br>
+                    <input type="radio" id="q6d" name="q6" value="0">
+                    <label for="q6d">Head</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 7
+                </span><br><br>
+                <div class="content" onclick="q7score()">
+                    How many balls are there outside the box?<br><br>
+                    <img src="{{url_for('static',filename='7.jpeg')}}"class="image" width=100 height=100></label><br>
+                    <input type="radio" id="q7a" name="q7" value="0">
+                    <label for="q7a">12</label><br>
+                    <input type="radio" id="q7b" name="q7" value="0">
+                    <label for="q7b">15</label><br>
+                    <input type="radio" id="q7c" name="q7" value="4">
+                    <label for="q7c">3</label><br>
+                    <input type="radio" id="q7d" name="q7" value="0">
+                    <label for="q7d">20</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 8
+                </span><br><br>
+                <div class="content" onclick="q8score()">
+                     If yesterday was Monday, then tomorrow will be ________.
+<br><br>
+                    <input type="radio" id="q8a" name="q8" value="0">
+                    <label for="q8a">Tuesday</label><br>
+                    <input type="radio" id="q8b" name="q8" value="4">
+                    <label for="q8b">Wednesday</label><br>
+                    <input type="radio" id="q8c" name="q8" value="0">
+                    <label for="q8c">Thursday</label><br>
+                    <input type="radio" id="q8d" name="q8" value="0">
+                    <label for="q8d">Friday</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 9
+                </span><br><br>
+                <div class="content"  onclick="q9score()">
+                    
+Add the following:<br><br>
+                    <img src="{{url_for('static',filename='9.jpeg')}}"class="image" width=120 height=70></label><br><br>
+                    <input type="radio" id="q9a" name="q9" value="4">
+                    <label for="q9a"><img src="{{url_for('static',filename='9a.jpeg')}}"class="image" width=120 height=70></label></label><br>
+                    <input type="radio" id="q9b" name="q9" value="0">
+                    <label for="q9b"><img src="{{url_for('static',filename='9b.jpeg')}}"class="image" width=120 height=70></label><br>
+                    <input type="radio" id="q9c" name="q9" value="4">
+                    <label for="q9c"><img src="{{url_for('static',filename='9c.jpeg')}}"class="image" width=120 height=70></label><br>
+                    <input type="radio" id="q9d" name="q9" value="0">
+                    <label for="q9d"><img src="{{url_for('static',filename='9d.jpeg')}}"class="image" width=120 height=70></label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 10
+                </span><br><br>
+                <div class="content"  onclick="q10score()">
+                    Which one of the following options has the greatest number?
+<br><br>
+                    <input type="radio" id="q10a" name="q10" value="0">
+                    <label for="q10a">200</label><br>
+                    <input type="radio" id="q10b" name="q10" value="0">
+                    <label for="q10b">220</label><br>
+                    <input type="radio" id="q10c" name="q10" value="0">
+                    <label for="q10c">450</label><br>
+                    <input type="radio" id="q10d" name="q10" value="4">
+                    <label for="q10d">555</label><br>
+                </div>
+                <br>
+            
+            <span id="button" onclick="submitscore()">SUBMIT</span>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br>
+    </div>
+    <script src="{{ url_for('static', filename='dyscalculia.js') }}">
+
+</script>
+</body>
+
+</html>

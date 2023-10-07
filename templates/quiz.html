@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quiz page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+
+<body>
+    <header>
+        <br>
+        <span><a href="index.html">Home</a></span>
+        <span><a href="about.html">About</a></span>
+        <span><a href="survey.html">Survey</a></span>
+        <span><a href="predict.html">Dyslexia</a></span>
+        <span id="last"><a href="predict2.html">Dyscalculia</a></span>
+    </header>
+    <div class="parallax1">
+        <div id="warning">
+            <centre> This quiz is specially designed for students to test if they are dyslexic or not. Students are
+                advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                ALL THE BEST JUNIOR!</centre>
+        </div>
+    </div>
+    <div class="main">
+        <form name="quiz" method="post" action="quiz.php">
+            <div class="question">
+                <span id="question">
+                    Question 1
+                </span><br><br>
+                <div class="content" onclick="q1score()">
+                    Check whether these two alphabets are same or not?<br><br>
+                    <img src="{{url_for('static',filename='o.png')}}" width=100 height=100><img src="{{url_for('static',filename='0.jpeg')}}" width=100 height=100><br>
+                    <input type="radio" id="q1a" name="q1" value="4">
+                    <label for="q1a">Yes</label><br>
+                    <input type="radio" id="q1b" name="q1" value="0">
+                    <label for="q1b">No</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 2
+                </span><br><br>
+                <div class="content" onclick="q2score()">
+                    Guess the fruit in the picture below.<br><br>
+                    <img src="{{url_for('static',filename='grapes.jpeg')}}" width=350 height=250><br>
+                    <input type="radio" id="q2a" name="q2" value="4">
+                    <label for="q2a">Grapes</label><br>
+                    <input type="radio" id="q2b" name="q2" value="0">
+                    <label for="q2b">Orange</label><br>
+                    <input type="radio" id="q2c" name="q2" value="0">
+                    <label for="q2c">Banana</label><br>
+                    <input type="radio" id="q2d" name="q2" value="0">
+                    <label for="q2d">Mango</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 3
+                </span><br><br>
+                <div class="content" onclick="q3score()">
+                    Check whether these two alphabets are same or not?<br><br>
+                    <img src="{{url_for('static',filename='g.jpg')}}" width=100 height=100><img src="{{url_for('static',filename='s.jpeg')}}" width=100 height=100><br>
+                    <input type="radio" id="q3a" name="q3" value="0">
+                    <label for="q3a">Yes</label><br>
+                    <input type="radio" id="q3b" name="q3" value="4">
+                    <label for="q3b">No</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 4
+                </span><br><br>
+                <div class="content" onclick="q4score()">
+                    Which letter is G?<br><br>
+                    <img src="{{url_for('static',filename='g.jpg')}}" width=100 height=100><img src="{{url_for('static',filename='o.png')}}" width=100 height=100><br>
+                    <input type="radio" id="q4a" name="q4" value="4">
+                    <label for="q4a">First</label><br>
+                    <input type="radio" id="q4b" name="q4" value="0">
+                    <label for="q4b">Second</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 5
+                </span><br><br>
+                <div class="content" onclick="q5score()">
+                    Which letter CAT starts with?<br><br>
+                    <img src="{{url_for('static',filename='cat.jpeg')}}" width=400 height=300><br>
+                    <input type="radio" id="q5a" name="q5" value="0">
+                    <label for="q5a">K</label><br>
+                    <input type="radio" id="q5b" name="q5" value="0">
+                    <label for="q5b">S</label><br>
+                    <input type="radio" id="q5c" name="q5" value="4">
+                    <label for="q5c">C</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 6
+                </span><br><br>
+                <div class="content" onclick="q6score()">
+                    What is the smaller version of this letter?<br><br>
+                    <img src="{{url_for('static',filename='b.png')}}"width=100 height=100><br>
+                    <input type="radio" id="q6a" name="q6" value="0">
+                    <label for="q6a">d</label><br>
+                    <input type="radio" id="q6b" name="q6" value="4">
+                    <label for="q6b">b</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 7
+                </span><br><br>
+                <div class="content" onclick="q7score()">
+                    What do you hear?<br><br>
+                    <audio controls>
+                        <source src="{{url_for('static',filename='s.mp3')}}"type="audio/mp3">
+                    </audio><br><br>
+                    <input type="radio" id="q7a" name="q7" value="0">
+                    <label for="q7a">F</label><br>
+                    <input type="radio" id="q7b" name="q7" value="4">
+                    <label for="q7b">S</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 8
+                </span><br><br>
+                <div class="content" onclick="q8score()">
+                    What do you see in the picture?<br><br>
+                    <img src="{{url_for('static',filename='god.jpeg')}}" width=300 height=200><br><br>
+                    <input type="radio" id="q8a" name="q8" value="0">
+                    <label for="q8a">DOG</label><br>
+                    <input type="radio" id="q8b" name="q8" value="4">
+                    <label for="q8b">GOD</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 9
+                </span><br><br>
+                <div class="content"  onclick="q9score()">
+                    Which hand is left and Which hand is right?<br><br>
+                    <img src="{{url_for('static',filename='right.jpeg')}}" width=300 height=200><img src="{{url_for('static',filename='left.jpeg')}}" width=300 height=200><br><br>
+                    <input type="radio" id="q9a" name="q9" value="4">
+                    <label for="q9a">First one is right and next one is
+                        left</label><br>
+                    <input type="radio" id="q9b" name="q9" value="0">
+                    <label for="q9b">First one is left and next one is
+                        right</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 10
+                </span><br><br>
+                <div class="content"  onclick="q10score()">
+                    What do you hear?<br><br>
+                    <audio controls>
+                        <source src="{{url_for('static',filename='lake.mp3')}}" type="audio/mp3">
+                    </audio><br><br>
+                    <input type="radio" id="q10a" name="q10" value="0">
+                    <label for="q10a">CAKE</label><br>
+                    <input type="radio" id="q10b" name="q10" value="4">
+                    <label for="q10b">LAKE</label><br>
+                    <input type="radio" id="q10c" name="q10" value="0">
+                    <label for="q10c">TAKE</label><br>
+                    <input type="radio" id="q10d" name="q10" value="0">
+                    <label for="q10d">FAKE</label><br>
+                </div>
+                <br>
+            
+            <span id="button" onclick="submitscore()">SUBMIT</span>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br>
+    </div>
+<script src="{{ url_for('static', filename='quiz.js') }}">
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Dyslexia Prediction</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="" />
+ 
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+
+<body>
+  <header>
+    <br>
+    <span class="w"><a href="index.html">Home</a></span>
+    <span class="w"><a href="about.html">About</a></span>
+    <span class="w"><a href="survey.html">Survey</a></span>
+    <span class="w" id="select"><a href="predict.html">Dyslexia</a></span>
+    <span class="w" id="last"><a href="predict2.html">Dyscalculia</a></span>
+</header>
+  <div class="login">
+    <h2><span id="quote">Dylexia Prediction</span></h2>
+    <h3>Please enter the scores you recieved</h3><br>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="form__group">
+      <div class="box">
+        <label for="lang" class="form__label">Language Vocabulary Score</label>
+        <input class="form__field" type="text" name="Language_vocab" placeholder="Language_vocab" required="required"
+          id="lang">
+      </div>
+      <div class="box">
+        <label for="mem" class="form__label">Memory Score</label>
+        <input class="form__field" type="text" name="Memory" placeholder="Memory" required="required" id="mem">
+      </div>
+      <div class="box">
+        <label for="sp" class="form__label">Speed</label>
+        <input class="form__field" type="text" name="Speed" placeholder="Speed" required="required" id="sp">
+      </div>
+      <div class="box">
+        <label for="vis" class="form__label">Visual Discrimination Score</label>
+        <input class="form__field" type="text" name="Visual_discrimination" placeholder="Visual_discrimination"
+          required="required" id="vis">
+      </div>
+      <div class="box">
+        <label for="aud" class="form__label">Audio Discrimination Score</label>
+        <input class="form__field" type="text" name="Audio_discrimination" placeholder="Audio_discrimination"
+          required="required" id="aud">
+      </div>
+      <div class="box">
+        <label for="sur" class="form__label">Survey Score</label>
+        <input class="form__field" type="text" name="Survey_score" placeholder="Survey_score" required="required"
+          id="sur">
+      </div>
+     </div><h1>
+      <button type="submit" style="text-align:center;border:black solid 2px;border-radius:5px;
+      font-size: 30px;
+      font-weight: bold;
+      padding: .5em;">
+        Predict
+      </button>
+    </h1>
+  </form>
+
+    <br />
+    <br /><span class="w" id="answer">
+    {{ prediction_text }}</span>
+  </div>
+  </div>
+  <footer>
+    2021 WEBpredictor<br>
+    All rights reserved<br>
+    Issued in public interest<br>
+    WEBpredictor does not provide any medical advice, diagnosis or treatment.<br><br>
+  </footer>
+</body>
+
+</html>
